@@ -1,0 +1,587 @@
+{
+	"id": "a9f1f46b-c314-4ea2-a52a-4684d77ebc57",
+	"name": "HUAllocation",
+	"timestamp": "2022-04-15T10:04:45.315Z",
+	"collection_id": "19955393-0bea14d2-72a4-4a74-b078-4b0d0a4ddb6d",
+	"folder_id": 0,
+	"environment_id": "19955393-e1259118-740c-41bd-b3a1-dc3da68435af",
+	"totalPass": 69,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "f24bbc19-3315-41b0-85cf-13fbf1879a70",
+			"name": "Product allocated based on score",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/perform-product-analysis-score",
+			"time": 521,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 500ms": false,
+				"Schema is valid": true,
+				"Check datatype for string": true,
+				"Message field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				521
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 500ms": false,
+					"Schema is valid": true,
+					"Check datatype for string": true,
+					"Message field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "43dd1e7e-c4d1-4463-8c19-97fb0640d7db",
+			"name": "Product allocated based on ratings",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/perform-product-analysis-rate",
+			"time": 545,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 600ms": true,
+				"Schema is valid": true,
+				"Check datatype for string": true,
+				"Message field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				545
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 600ms": true,
+					"Schema is valid": true,
+					"Check datatype for string": true,
+					"Message field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "1f2d1615-ca28-4ad0-9eb7-57fcc83c6b77",
+			"name": "Product allocated based on only ratings",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/perform-product-analysis-only-rate",
+			"time": 405,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 600ms": true,
+				"Schema is valid": true,
+				"Check datatype for string": true,
+				"Message field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				405
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 600ms": true,
+					"Schema is valid": true,
+					"Check datatype for string": true,
+					"Message field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "aefc9600-5303-46eb-9642-66ff5a2d8325",
+			"name": "Get track results of all linkers",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/track-result",
+			"time": 584,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 3000ms": true,
+				"Body matches string": true,
+				"Check datatype for id": true,
+				"Check datatype for string": true,
+				"Id field is not empty": true,
+				"email field is not empty": true,
+				"Score 1 field is not empty": true,
+				"grade 1 field is not empty": true,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Score 1 field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"grade 1 field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				584
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 3000ms": true,
+					"Body matches string": true,
+					"Check datatype for id": true,
+					"Check datatype for string": true,
+					"Id field is not empty": true,
+					"email field is not empty": true,
+					"Score 1 field is not empty": true,
+					"grade 1 field is not empty": true,
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "ce1f8c11-126c-46ef-b4ca-f63011078aa8",
+			"name": "Get result of a particular linker by email",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/track-result/edorkins0",
+			"time": 259,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Body matches string": true,
+				"Check datatype for id": true,
+				"Check datatype for string": true,
+				"Id field is not empty": true,
+				"email field is not empty": true,
+				"Score 1 field is not empty": true,
+				"grade 1 field is not empty": true,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Score 1 field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"grade 1 field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				259
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Body matches string": true,
+					"Check datatype for id": true,
+					"Check datatype for string": true,
+					"Id field is not empty": true,
+					"email field is not empty": true,
+					"Score 1 field is not empty": true,
+					"grade 1 field is not empty": true,
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "6bfc7000-02c3-4628-b9a5-17707eb219de",
+			"name": "Get all the track allocated to linkers",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/track-allocated",
+			"time": 603,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				603
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5cba9b40-cf66-469c-a71f-64bb8edf6848",
+			"name": "Get track allocated to a particular linker through email",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/track-allocated/email/ceulu",
+			"time": 255,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Body matches string": true,
+				"Check datatype for id": true,
+				"Check datatype for string": true,
+				"Check datatype for name": true,
+				"Check datatype for assigned track": true,
+				"Id field is not empty": true,
+				"email field is not empty": true,
+				"name field is not empty": true,
+				"assigned track field is not empty": true,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for assigned track": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"name field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assigned track field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Body matches string": true,
+					"Check datatype for id": true,
+					"Check datatype for string": true,
+					"Check datatype for name": true,
+					"Check datatype for assigned track": true,
+					"Id field is not empty": true,
+					"email field is not empty": true,
+					"name field is not empty": true,
+					"assigned track field is not empty": true,
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "86409856-4e26-453a-b758-04e7efe578ee",
+			"name": "Get all the linkers in a particular track",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/track-allocated/track/Advance%20Angular",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Body matches string": true,
+				"Check datatype for id": true,
+				"Check datatype for string": true,
+				"Check datatype for name": true,
+				"Check datatype for assigned track": true,
+				"Id field is not empty": true,
+				"email field is not empty": true,
+				"name field is not empty": true,
+				"assigned track field is not empty": true,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for assigned track": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"name field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assigned track field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				289
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Body matches string": true,
+					"Check datatype for id": true,
+					"Check datatype for string": true,
+					"Check datatype for name": true,
+					"Check datatype for assigned track": true,
+					"Id field is not empty": true,
+					"email field is not empty": true,
+					"name field is not empty": true,
+					"assigned track field is not empty": true,
+					"Schema is valid": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3461,
+	"collection": {
+		"requests": [
+			{
+				"id": "f24bbc19-3315-41b0-85cf-13fbf1879a70",
+				"method": "GET"
+			},
+			{
+				"id": "43dd1e7e-c4d1-4463-8c19-97fb0640d7db",
+				"method": "GET"
+			},
+			{
+				"id": "1f2d1615-ca28-4ad0-9eb7-57fcc83c6b77",
+				"method": "GET"
+			},
+			{
+				"id": "aefc9600-5303-46eb-9642-66ff5a2d8325",
+				"method": "GET"
+			},
+			{
+				"id": "ce1f8c11-126c-46ef-b4ca-f63011078aa8",
+				"method": "GET"
+			},
+			{
+				"id": "6bfc7000-02c3-4628-b9a5-17707eb219de",
+				"method": "GET"
+			},
+			{
+				"id": "5cba9b40-cf66-469c-a71f-64bb8edf6848",
+				"method": "GET"
+			},
+			{
+				"id": "86409856-4e26-453a-b758-04e7efe578ee",
+				"method": "GET"
+			}
+		]
+	}
+}

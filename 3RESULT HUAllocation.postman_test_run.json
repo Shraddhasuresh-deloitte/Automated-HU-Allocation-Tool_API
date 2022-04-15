@@ -1,0 +1,635 @@
+{
+	"id": "a31b06d9-62fe-4c5c-80c2-6880d0325fed",
+	"name": "HUAllocation",
+	"timestamp": "2022-04-15T09:59:11.513Z",
+	"collection_id": "20124018-706c96e8-aaa9-4c4f-a3b2-df8a74c4ac93",
+	"folder_id": "20124018-1f7ed18b-5d31-453a-baf5-ed559f549031",
+	"environment_id": "20124018-b6e7f57d-0077-42ba-9e70-73883494ce40",
+	"totalPass": 51,
+	"totalFail": 9,
+	"results": [
+		{
+			"id": "583bd787-635c-46fe-87d9-44fed3d3038f",
+			"name": "Get all section lead remarks",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/section-lead-remarks",
+			"time": 536,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 500ms": false,
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Schema is valid": true,
+				"Check datatype for id": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				536
+			],
+			"allTests": [
+				{
+					"Response time is less than 500ms": false,
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Schema is valid": true,
+					"Check datatype for id": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "3b1e7e75-c98b-412e-8f20-d43b373d7abf",
+			"name": "Get the section lead remark for a particular linker through email",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/section-lead-remarks/edorkins0",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Body matches string": true,
+				"Schema is valid": true,
+				"Check datatype for id": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Body matches string": true,
+					"Schema is valid": true,
+					"Check datatype for id": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "581e1767-62c5-4d22-8d29-cd96274b30da",
+			"name": "Get all product detail",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-detail",
+			"time": 311,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Body matches string": true,
+				"Schema is valid": true,
+				"Check datatype for id": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				311
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Body matches string": true,
+					"Schema is valid": true,
+					"Check datatype for id": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "ea7683bd-4f11-4def-b7bb-19e5f826616b",
+			"name": "Get product details by Id",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-detail/id/100",
+			"time": 279,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				279
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "65a1ce91-e468-443e-b48a-665fda957d16",
+			"name": "Get preference of a linker by email",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-pref/email/edorkins0",
+			"time": 312,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 500ms": false,
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Schema is valid": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				312
+			],
+			"allTests": [
+				{
+					"Response time is less than 500ms": false,
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Schema is valid": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "bdf68713-12c2-4b03-b32e-ed6239f497fc",
+			"name": "Get a single product details",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-detail/name/SWIPE",
+			"time": 273,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Body matches string": false,
+				"Response time is less than 200ms": false,
+				"Schema is valid": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Body matches string": false,
+					"Response time is less than 200ms": false,
+					"Schema is valid": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "0c256300-3b24-44e1-807b-e2d71a7776fc",
+			"name": "Get all the linkers with a particular product as first preference",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-pref/preference/Hobby%20groups%20app%20in%20companies",
+			"time": 316,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Schema is valid": true,
+				"Check datatype for id": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				316
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Schema is valid": true,
+					"Check datatype for id": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "61f6c6fe-39e2-4c52-8a55-2fb4f64d6c1a",
+			"name": "Get  the products allocated to all linkers",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-allocated",
+			"time": 573,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 200ms": false,
+				"Schema is valid": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				573
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": false,
+					"Schema is valid": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "1a58026c-7452-4476-b57f-94dfac6f17fa",
+			"name": "Get product allocated to a particular linker by email id",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-allocated/email/edorkins0",
+			"time": 331,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 200ms": false,
+				"Schema is valid": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				331
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": false,
+					"Schema is valid": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "e0287569-e880-4278-9fe1-6b181e6e686c",
+			"name": "Get the linkers allocated with a particular product",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-allocated/product/SWIPE",
+			"time": 294,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 500ms": true,
+				"Schema is valid": true,
+				"Check datatype for id": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				294
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 500ms": true,
+					"Schema is valid": true,
+					"Check datatype for id": true,
+					"Id field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "50d33766-64b1-44d7-aef5-7dfea80b0a57",
+			"name": "Post product detail",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/product-detail",
+			"time": 299,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response time is less than 500ms": true,
+				"Body matches string": true,
+				"Schema is valid": true,
+				"Id field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				299
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response time is less than 500ms": true,
+					"Body matches string": true,
+					"Schema is valid": true,
+					"Id field is not empty": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3820,
+	"collection": {
+		"requests": [
+			{
+				"id": "583bd787-635c-46fe-87d9-44fed3d3038f",
+				"method": "GET"
+			},
+			{
+				"id": "3b1e7e75-c98b-412e-8f20-d43b373d7abf",
+				"method": "GET"
+			},
+			{
+				"id": "581e1767-62c5-4d22-8d29-cd96274b30da",
+				"method": "GET"
+			},
+			{
+				"id": "ea7683bd-4f11-4def-b7bb-19e5f826616b",
+				"method": "GET"
+			},
+			{
+				"id": "65a1ce91-e468-443e-b48a-665fda957d16",
+				"method": "GET"
+			},
+			{
+				"id": "bdf68713-12c2-4b03-b32e-ed6239f497fc",
+				"method": "GET"
+			},
+			{
+				"id": "0c256300-3b24-44e1-807b-e2d71a7776fc",
+				"method": "GET"
+			},
+			{
+				"id": "61f6c6fe-39e2-4c52-8a55-2fb4f64d6c1a",
+				"method": "GET"
+			},
+			{
+				"id": "1a58026c-7452-4476-b57f-94dfac6f17fa",
+				"method": "GET"
+			},
+			{
+				"id": "e0287569-e880-4278-9fe1-6b181e6e686c",
+				"method": "GET"
+			},
+			{
+				"id": "50d33766-64b1-44d7-aef5-7dfea80b0a57",
+				"method": "POST"
+			}
+		]
+	}
+}

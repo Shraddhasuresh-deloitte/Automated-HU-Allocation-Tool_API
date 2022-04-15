@@ -1,0 +1,403 @@
+{
+	"id": "f088d863-321b-4121-be2c-96b65ad90e48",
+	"name": "HUAllocation",
+	"timestamp": "2022-04-15T10:02:22.678Z",
+	"collection_id": "19945528-c101837b-fa67-4d4f-a04b-95a41edb0840",
+	"folder_id": 0,
+	"environment_id": "19945528-bef6ca8c-b113-451e-bec8-a3eff1683bce",
+	"totalPass": 32,
+	"totalFail": 17,
+	"results": [
+		{
+			"id": "0b36be72-d4c9-423b-accd-4f23b7d5f58d",
+			"name": "Get all linkers data",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/linker-data/",
+			"time": 560,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 200ms": false,
+				"Id field is not empty": true,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				560
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": false,
+					"Id field is not empty": true,
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "8237ba26-6f45-42f9-8337-f40b261c3fa2",
+			"name": "User login",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/login",
+			"time": 658,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Body matches string": false,
+				"Response time is less than 200ms": false,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				658
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Body matches string": false,
+					"Response time is less than 200ms": false,
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "41cf357e-b00d-460e-aee9-cd77e751ea24",
+			"name": "Get a linkers detail by email",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/linker-data/edorkins0",
+			"time": 472,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 200ms": false,
+				"Id field is not empty": true,
+				"Schema is valid": true,
+				"Check datatype for id": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				472
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": false,
+					"Id field is not empty": true,
+					"Schema is valid": true,
+					"Check datatype for id": true
+				}
+			]
+		},
+		{
+			"id": "ab8db9af-e594-4d73-8dc4-bd36eec41b7d",
+			"name": "Check user",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/check-user/edorkins0",
+			"time": 872,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 200ms": false,
+				"Id field is not empty": true,
+				"Schema is valid": true,
+				"id is an integer": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"id is an integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				872
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": false,
+					"Id field is not empty": true,
+					"Schema is valid": true,
+					"id is an integer": true
+				}
+			]
+		},
+		{
+			"id": "070b74d1-3798-4e74-b0ba-695886e80b4d",
+			"name": "Change password",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/user/change-password",
+			"time": 464,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response time is less than 200ms": false,
+				"Status code is 200": false,
+				"Body matches string": false
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				464
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": false,
+					"Status code is 200": false,
+					"Body matches string": false
+				}
+			]
+		},
+		{
+			"id": "8f24c9da-9a47-479d-bd6b-9dc8649a3fa5",
+			"name": "Get notifications sent to all linkers",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/notification",
+			"time": 252,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": false,
+				"Response time is less than 200ms": false,
+				"Id field is not empty": true,
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				252
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": false,
+					"Response time is less than 200ms": false,
+					"Id field is not empty": true,
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "ccad50a0-1890-40bb-b468-754dca01aebe",
+			"name": "Get notification by id",
+			"url": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/notification/11",
+			"time": 242,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": false,
+				"Response time is less than 200ms": false,
+				"Id field is not empty": true,
+				"Schema is valid": true,
+				"Check datatype for id": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check datatype for id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				242
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": false,
+					"Response time is less than 200ms": false,
+					"Id field is not empty": true,
+					"Schema is valid": true,
+					"Check datatype for id": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3520,
+	"collection": {
+		"requests": [
+			{
+				"id": "0b36be72-d4c9-423b-accd-4f23b7d5f58d",
+				"method": "GET"
+			},
+			{
+				"id": "8237ba26-6f45-42f9-8337-f40b261c3fa2",
+				"method": "POST"
+			},
+			{
+				"id": "41cf357e-b00d-460e-aee9-cd77e751ea24",
+				"method": "GET"
+			},
+			{
+				"id": "ab8db9af-e594-4d73-8dc4-bd36eec41b7d",
+				"method": "GET"
+			},
+			{
+				"id": "070b74d1-3798-4e74-b0ba-695886e80b4d",
+				"method": "PUT"
+			},
+			{
+				"id": "8f24c9da-9a47-479d-bd6b-9dc8649a3fa5",
+				"method": "GET"
+			},
+			{
+				"id": "ccad50a0-1890-40bb-b468-754dca01aebe",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,585 @@
+{
+	"info": {
+		"_postman_id": "7c9c2b48-5f47-4c08-94b0-abe90bf12bc5",
+		"name": "HUAllocation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Track",
+			"item": [
+				{
+					"name": "Post parallel track preference",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Advance Angular\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true,false ];\r",
+									"var email=[true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"104\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email, \"jsalamon3\")).to.be.true;\r",
+									"    \r",
+									"\r",
+									"   \r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"\r",
+									"});\r",
+									"pm.test(\"id is an integer\" , () => {  \r",
+									"_.each(pm.response.json().response, (item) => {    \r",
+									"pm.expect(typeof item[\"id\"]).to.be.oneOf(['number']) \r",
+									"\r",
+									"})\r",
+									"\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/parallel-track-pref",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"parallel-track-pref"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post section lead remark",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"miffes\");\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true,false ];\r",
+									"var email=[true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"101\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email, \"edorkins0\")).to.be.true;\r",
+									"    \r",
+									"\r",
+									"   \r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"\r",
+									"});\r",
+									"pm.test(\"id is an integer\" , () => {  \r",
+									"_.each(pm.response.json().response, (item) => {    \r",
+									"pm.expect(typeof item[\"id\"]).to.be.oneOf(['number']) \r",
+									"\r",
+									"})\r",
+									"\r",
+									"})\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/section-lead-remarks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"section-lead-remarks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post track result",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"miffes\");\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true,false ];\r",
+									"var email=[true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"101\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email, \"edorkins0\")).to.be.true;\r",
+									"       \r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"\r",
+									"});\r",
+									"pm.test(\"id is an integer\" , () => {  \r",
+									"_.each(pm.response.json().response, (item) => {    \r",
+									"pm.expect(typeof item[\"id\"]).to.be.oneOf(['number']) \r",
+									"\r",
+									"})\r",
+									"\r",
+									"})\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/track-result",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"track-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post  parallel track details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"IOT\");\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true,false ];\r",
+									"var name=[true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"6\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(name, \"Data Engineering\")).to.be.true;\r",
+									"       \r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"\r",
+									"});\r",
+									"pm.test(\"id is an integer\" , () => {  \r",
+									"_.each(pm.response.json().response, (item) => {    \r",
+									"pm.expect(typeof item[\"id\"]).to.be.oneOf(['number']) \r",
+									"\r",
+									"})\r",
+									"\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/parallel-track-detail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"parallel-track-detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track allocated on basis of ratings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 600ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Done\")).to.be.true;\r",
+									"   \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/perform-track-analysis-rate-no",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"perform-track-analysis-rate-no"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track allocated on basis of rating and effort",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Done\")).to.be.true;\r",
+									"   \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/perform-track-analysis-rate-yes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"perform-track-analysis-rate-yes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track allocated on basis of only ratings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Done\")).to.be.true;\r",
+									"   \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/perform-track-analysis-only-rate-no",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"perform-track-analysis-only-rate-no"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track allocated on basis of only ratings and effort",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Done\")).to.be.true;\r",
+									"   \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/perform-track-analysis-only-rate-yes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"perform-track-analysis-only-rate-yes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track allocated on basis of score with effort",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Done\")).to.be.true;\r",
+									"   \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/perform-track-analysis-score-yes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"perform-track-analysis-score-yes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track allocated on basis of score with no effort",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true,false ];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Done\")).to.be.true;\r",
+									"   \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/perform-track-analysis-score-no",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"perform-track-analysis-score-no"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "API's used wile track analysis and allocation\n\nIt contains the following requests:\n\n1.  Get track results of all linkers.\n2.  Get result of a particular linker by email.\n3.  Get all the tracks allocated to linkers.\n4.  Get track allocated to a particular linker through email.\n5.  Get all the linkers in a particular track.\n6.  Post parallel track preference\n7.  Post section lead remark\n8.  Post track result\n9.  Post parallel track details\n10.  Track allocated on basis of ratings\n11.  Track allocated on basis of ratings and effort\n12.  Track allocated on basis of only ratings\n13.  Track allocated on basis of only ratings and effort\n14.  Track allocated on basis of score with effort\n15.  Track allocated on basis of score with no effort"
+		}
+	]
+}

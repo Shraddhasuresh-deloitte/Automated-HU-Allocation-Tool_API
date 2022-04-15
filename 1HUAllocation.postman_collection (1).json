@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "c101837b-fa67-4d4f-a04b-95a41edb0840",
+		"name": "HUAllocation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all linkers data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"edorkins0\");\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Ebenezer Dorkins\");\r",
+									"});\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"B\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var email = [true, false];\r",
+									"var name = [true, false];\r",
+									"var section = [true, false];\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"82\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email,\"edorkins0\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(name,\"Ebenezer Dorkins\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(section,\"B\" )).to.be.true;\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var email = [true, false];\r",
+									"var name = [true, false];\r",
+									"var section = [true, false];\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"2\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email,\"sturmall1\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(name,\"Shela Turmall\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(section,\"B\" )).to.be.true;\r",
+									"    \r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}linker-data/",
+							"host": [
+								"{{url}}linker-data"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"linkerdetails\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"var url = [true, false];\r",
+									"var token = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(url, \"linkerdetails\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(token,\"39b1d71d470d5b82d68f765e21b9d873340ad0d0\" )).to.be.true;\r",
+									"    \r",
+									"    \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "rdawidowsky4",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/login",
+							"protocol": "https",
+							"host": [
+								"huallocation-backend-urtjok3rza-wl",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"HUAllocation",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a linkers detail by email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"edorkins0\");\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Ebenezer Dorkins\");\r",
+									"});\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"B\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var email = [true, false];\r",
+									"var name = [true, false];\r",
+									"var section = [true, false];\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"101\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email,\"edorkins0\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(name,\"Ebenezer Dorkins\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(section,\"B\" )).to.be.true;\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.be.oneOf(['number']) \r",
+									"})\r",
+									" })\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}linker-data/edorkins0",
+							"host": [
+								"{{url}}linker-data"
+							],
+							"path": [
+								"edorkins0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get linkers detail by email example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/linker-data/edorkins0",
+									"protocol": "https",
+									"host": [
+										"huallocation-backend-urtjok3rza-wl",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"HUAllocation",
+										"linker-data",
+										"edorkins0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "DENY"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "cross-origin-opener-policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "244c7d6367f85e32560318ca536b143f;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Apr 2022 05:03:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"edorkins0\",\n    \"name\": \"Ebenezer Dorkins\",\n    \"section\": \"B\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Check user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"edorkins0\");\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Ebenezer\");\r",
+									"});\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Dorkins\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var password = [true, false];\r",
+									"var last_login = [true, false];\r",
+									"var username = [true, false];\r",
+									"var firstname = [true, false];\r",
+									"var lastname = [true, false];\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"2\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(password,\"pbkdf2_sha256$320000$vUtWDT1MvbsKPJRuOZq3qb$8YS4asDjIs1OjWEAH+5R54I/+xwiHKbmAqxpgXHVPWk=\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(last_login,\"2022-04-12T14:36:36.858156+05:30\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(username,\"edorkins0\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(firstname,\"Ebenezer\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(lastname,\"Dorkins\" )).to.be.true;\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"id is an integer\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.be.oneOf(['number']) \r",
+									"})\r",
+									" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "edorkins0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}check-user/edorkins0",
+							"host": [
+								"{{url}}check-user"
+							],
+							"path": [
+								"edorkins0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Success\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "shashankkk",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "fhindmorem",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"old_password\":\"shashankkk\", \"new_password\":\"shashank\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/user/change-password",
+							"protocol": "https",
+							"host": [
+								"huallocation-backend-urtjok3rza-wl",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"HUAllocation",
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "API collection for user(linker/director) basic functionalities\n\nIt contains following requests:\n\n1.  User login\n2.  Get all linkers data\n3.  Get linkers data by email"
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get notifications sent to all linkers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"HUDIRECTOR\");\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"null\");\r",
+									"});\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Kindly Fill Your Preferences !\");\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"HELLO\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var sender = [true, false];\r",
+									"var receiver = [true, false];\r",
+									"var message = [true, false];\r",
+									"var is_seen = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"80\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(sender,\"HUDIRECTOR\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(receiver,\"null\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(message,\"Kindly Fill your Preferences !\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(is_seen,\"false\" )).to.be.true;\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var sender = [true, false];\r",
+									"var receiver = [true, false];\r",
+									"var message = [true, false];\r",
+									"var is_seen = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"81\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(sender,\"HUDIRECTOR\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(receiver,\"null\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(message,\"New Notification -> Shown Above\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(is_seen,\"true\" )).to.be.true;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}notification",
+							"host": [
+								"{{url}}notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get notification by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"HUDIRECTOR\");\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"null\");\r",
+									"});\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Kindly Fill Your Preferences !\");\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"HELLO\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.value).not.eql(null);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"    \r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var sender = [true, false];\r",
+									"var receiver = [true, false];\r",
+									"var message = [true, false];\r",
+									"var is_seen = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"82\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(sender,\"HUDIRECTOR\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(receiver,\"null\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(message,\"Fill your pref\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(is_seen,\"false\" )).to.be.true;\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var sender = [true, false];\r",
+									"var receiver = [true, false];\r",
+									"var message = [true, false];\r",
+									"var is_seen = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"83\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(sender,\"HUDIRECTOR\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(receiver,\"null\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(message,\"HELLO\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(is_seen,\"true\" )).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.not.be.oneOf(['number']) \r",
+									"\r",
+									" })\r",
+									"\r",
+									"})\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}notification/11",
+							"host": [
+								"{{url}}notification"
+							],
+							"path": [
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Notification by id example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://huallocation-backend-urtjok3rza-wl.a.run.app/HUAllocation/notification/11",
+									"protocol": "https",
+									"host": [
+										"huallocation-backend-urtjok3rza-wl",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"HUAllocation",
+										"notification",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "allow",
+									"value": "GET, POST, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "DENY"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "cross-origin-opener-policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "4d86b454855d4fd340e52c021ff53c09;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Apr 2022 14:39:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "506"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 26,\n        \"sender\": \"HUDIRECTOR\",\n        \"receiver\": \"brooper11\",\n        \"message\": \"Hello4\",\n        \"is_seen\": false,\n        \"message_all\": true,\n        \"is_sent\": true,\n        \"noti_dttime\": \"2022-04-11T20:07:59.128000+05:30\"\n    },\n    {\n        \"id\": 25,\n        \"sender\": \"HUDIRECTOR\",\n        \"receiver\": \"brooper11\",\n        \"message\": \"Hello3\",\n        \"is_seen\": false,\n        \"message_all\": true,\n        \"is_sent\": true,\n        \"noti_dttime\": \"2022-04-11T20:07:59+05:30\"\n    },\n    {\n        \"id\": 23,\n        \"sender\": \"HUDIRECTOR\",\n        \"receiver\": null,\n        \"message\": \"Hello1\",\n        \"is_seen\": false,\n        \"message_all\": true,\n        \"is_sent\": true,\n        \"noti_dttime\": \"2022-04-11T20:07:33.648000+05:30\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "API collection for notification service:\n\nIt includes the following requests:\n\n1.  Get notification sent to all linkers.\n2.  Get notification by id"
+		}
+	]
+}

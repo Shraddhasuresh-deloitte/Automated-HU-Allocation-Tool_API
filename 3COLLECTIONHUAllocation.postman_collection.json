@@ -1,0 +1,685 @@
+{
+	"info": {
+		"_postman_id": "706c96e8-aaa9-4c4f-a3b2-df8a74c4ac93",
+		"name": "HUAllocation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get all section lead remarks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"jsalamon3\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message  = [true, false];\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Section lead remarks does not exist\")).to.be.true;\r",
+									"    \r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var email = [true, 123];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"5\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email, \"rdawidowsky4\")).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.not.be.oneOf(['number']) \r",
+									" })\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/section-lead-remarks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"section-lead-remarks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the section lead remark for a particular linker through email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"edorkins0\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var effort = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"1\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(effort, \"1\")).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.not.be.oneOf(['number']) \r",
+									" })\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/section-lead-remarks/edorkins0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"section-lead-remarks",
+								"edorkins0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all product detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include( \"Create an application that fits-up the all the scenarios and or could make purchasing goos online from e-commerce experience from great to wow by remaining on only one desktop or mobile-based app.\");\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Cross skilling app OR Mentoring App\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var name = [true, false];\r",
+									"var description = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"6\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(name,\"Cross skilling app OR Mentoring App\" )).to.be.true;\r",
+									"    pm.expect(tv4.validate(description, \"Build an application for employees to gain new skill set in their ideal time whilst helping other PM during the time of resource crunch.\")).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.not.be.oneOf(['number']) \r",
+									" })\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-detail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product details by Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"New Product\" );\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-detail/id/100",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-detail",
+								"id",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get preference of a linker by email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"edorkins0\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var message = [true, false];\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(message, \"Product Preference of linker does not exist\")).to.be.true;\r",
+									"\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-pref/email/edorkins0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-pref",
+								"email",
+								"edorkins0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single product details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Build an application where users are presented with simple cards loaded with fun facts and information.\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var name = [true, false];\r",
+									"var id = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(name, \"SWIPE\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(id,\"Build an application where users are presented with simple cards loaded with fun facts and information.\" )).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-detail/name/SWIPE",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-detail",
+								"name",
+								"SWIPE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the linkers with a particular product as first preference",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Parking Slot Booking\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var email = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id,\"10\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(email, \"bseary9\")).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.not.be.oneOf(['number']) \r",
+									" })\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-pref/preference/Hobby groups app in companies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-pref",
+								"preference",
+								"Hobby groups app in companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  the products allocated to all linkers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"rdawidowsky4\");\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Marcile Jeanenet\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var product = [true, false];\r",
+									"var islead = [true, 123];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(product, \"Survey tool\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(islead,\"Yes\" )).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-allocated",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-allocated"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product allocated to a particular linker by email id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Ebenezer Dorkins\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var name = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"id\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(name, \"Ebenezer Dorkins\")).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-allocated/email/edorkins0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-allocated",
+								"email",
+								"edorkins0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the linkers allocated with a particular product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"mparslowi\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var email = [true, false];\r",
+									"var islead = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(email, \"gmuehleb\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(islead, \"No\")).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check datatype for id\" , () => {  _.each(pm.response.json().response, (item) => {    pm.expect(typeof item[\"id\"]).to.not.be.oneOf(['number']) \r",
+									" })\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product-allocated/product/SWIPE",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-allocated",
+								"product",
+								"SWIPE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post product detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"New Product\");\r",
+									"});\r",
+									"var schema = {\r",
+									"    \"items\": {\r",
+									"        \"type\": \"boolean\"\r",
+									"    }\r",
+									"};\r",
+									"\r",
+									"var id = [true, false];\r",
+									"var name = [true, false];\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(id, \"49\")).to.be.true;\r",
+									"    pm.expect(tv4.validate(name, \"Sample\")).to.be.true;\r",
+									"});\r",
+									"pm.test(\"Id field is not empty\", function () {\r",
+									"\r",
+									"var id1= pm.response.json();\r",
+									"\r",
+									"pm.expect(id1.id).not.equal(null);\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"Sample \",\r\n\"description\": \" New Product\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product-detail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product-detail"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "API's for product analysis and allocation .\n\nIt contains following requests:\n\nGet all section lead remarks.\n\n1.  Get section lead remarks by email\n2.  Get all product detail.\n3.  Get a single product details.\n4.  Get product details by id.\n5.  Get preferences of a linker by email.\n6.  Get all the linkers with a particular track as first preference.\n7.  Get the product allocated to all linkers.\n8.  Get all the product allocated to a linker by email.\n9.  Get all linkers with a particular track.\n10.  Post product detail.\n11.  Post product detail of all products.\n12.  Post product preference of a linker\n13.  Product allocated based on score\n14.  Product allocated based on ratrings\n15.  Product allocated based on only ratings"
+		}
+	]
+}
